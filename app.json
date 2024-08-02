@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Mumble",
+    "slug": "mumble",
+    "description": "your bumble for clothes",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a0f2891b-33a7-404d-92cc-9f343674adce"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/a0f2891b-33a7-404d-92cc-9f343674adce"
+    },
+    "android": {},
+    "ios": {}
+  }
+}
