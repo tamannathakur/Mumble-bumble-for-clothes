@@ -16,7 +16,6 @@ const EditProfileScreen = () => {
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    // Fetch the profile data
     axios.get('https://mumble-backend-8az2.onrender.com/api/profile', {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -24,9 +23,8 @@ const EditProfileScreen = () => {
     })
    .then(response => {
     setProfile(response.data);
-   // setPreferences(response.data.userPreferences || []);
    const fetchedPreferences = response.data.userPreferences || [];
-   setPreferences(fetchedPreferences.map(p => p.tag)); // Only keep tags in the state
+   setPreferences(fetchedPreferences.map(p => p.tag)); 
   })
     .catch(error => {
       console.error('Error fetching profile data:', error);
@@ -58,10 +56,10 @@ const EditProfileScreen = () => {
     if (profile) {
         try {
           await axios.put('https://mumble-backend-8az2.onrender.com/api/preferences', {
-            email: profile.email, // Ensure profile is defined and has the email property
+            email: profile.email, 
             userPreferences: preferences.map(tag => ({
               tag,
-              weight: 1, // Assuming weight remains 1 for all preferences; adjust if necessary
+              weight: 1,
               lastUpdated: new Date().toISOString(),
             })),
           }, {
@@ -84,17 +82,16 @@ const EditProfileScreen = () => {
 
   const handleRemovePreference = async (preferenceToRemove) => {
     try {
-      // Remove the preference from the UI state
+     
       const updatedPreferences = preferences.filter(p => p !== preferenceToRemove);
       setPreferences(updatedPreferences);
   
-      // Send request to the backend to update preferences
       if (profile) {
         await axios.put('https://mumble-backend-8az2.onrender.com/api/preferences', {
           email: profile.email,
           userPreferences: updatedPreferences.map(tag => ({
             tag,
-            weight: 1, // Assuming weight remains 1 for all preferences; adjust if necessary
+            weight: 1, 
             lastUpdated: new Date().toISOString(),
           })),
         }, {

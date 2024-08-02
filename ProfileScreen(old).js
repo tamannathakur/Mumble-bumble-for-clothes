@@ -26,7 +26,7 @@ const ProfileScreen = () => {
   }, []);
 
   const getToken = async () => {
-    // Add your logic to get the token, for example:
+    
     const user = auth().currentUser;
     return user ? await user.getIdToken() : null;
   };

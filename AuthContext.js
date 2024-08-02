@@ -1,9 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-
-// Create a context for authentication
 const AuthContext = createContext();
-
-// AuthProvider component to provide auth context values to children components
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
@@ -26,7 +22,6 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the AuthContext and access its values
 export const useAuth = () => useContext(AuthContext);
 
 export default AuthContext;

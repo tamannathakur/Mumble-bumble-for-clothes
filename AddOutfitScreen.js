@@ -62,7 +62,7 @@ const AddOutfitScreen = ({ navigation }) => {
       console.error('No photo selected');
       return;
     }
-    // Photo URL is already correctly handled by the uploadImageToFirebase function
+    
     const imageUrl = await uploadImageToFirebase(photo);
     if (!imageUrl) {
       console.error('Failed to upload image to Firebase');
@@ -70,7 +70,7 @@ const AddOutfitScreen = ({ navigation }) => {
     }
   
     const newOutfit = {
-      photo: imageUrl, // URL of the uploaded image
+      photo: imageUrl, 
       name,
       tags: tags.split(','),
       items,

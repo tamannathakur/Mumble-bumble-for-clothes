@@ -1,14 +1,14 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import config from './src/config'; // Adjust the import path as necessary
-import AuthContext from './AuthContext'; // Import AuthContext
+import config from './src/config'; 
+import AuthContext from './AuthContext';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
-  const { login } = useContext(AuthContext); // Use useContext to get login method
+  const { login } = useContext(AuthContext); 
 
   const handleLogin = async () => {
     try {
@@ -32,7 +32,7 @@ const LoginScreen = () => {
         //Alert.alert('Success', 'Login successful');
         //navigation.navigate('Home');
         if (token) {
-          login(user, token); // Call login method from context with token
+          login(user, token); 
           Alert.alert('Success', 'Login successful');
           navigation.navigate('Home');
         } else {
@@ -58,7 +58,7 @@ const LoginScreen = () => {
         onChangeText={setEmail}
         autoCapitalize="none"
         keyboardType="email-address"
-        placeholderTextColor="#aaa" // Set color for placeholder text
+        placeholderTextColor="#aaa" 
       />
       <TextInput
         style={styles.input}
@@ -66,7 +66,7 @@ const LoginScreen = () => {
         secureTextEntry
         value={password}
         onChangeText={setPassword}
-        placeholderTextColor="#aaa" // Set color for placeholder text
+        placeholderTextColor="#aaa" 
       />
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Login</Text>
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   logo: {
-    width: 150,  // Adjust the width as necessary
-    height: 50,  // Adjust the height as necessary
+    width: 150, 
+    height: 50,  
     resizeMode: 'contain',
     alignSelf: 'center',
     marginBottom: 40,

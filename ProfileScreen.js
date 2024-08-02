@@ -53,7 +53,7 @@ const ProfileScreen = ({ navigation }) => {
             Authorization: `Bearer ${token}`,
           },
         });
-        if (isMounted) { // Check if component is still mounted
+        if (isMounted) {
           setProfile(response.data);
           const userPreferences = response.data.userPreferences || [];
           setPreferences(response.data.userPreferences || []);
@@ -69,7 +69,7 @@ const ProfileScreen = ({ navigation }) => {
     };
 
     const getDominantPreferences = (preferences) => {
-      // Check if preferences is an array and sort if true
+     
       return Array.isArray(preferences)
         ? preferences
             .sort((a, b) => b.weight - a.weight)
@@ -82,7 +82,7 @@ const ProfileScreen = ({ navigation }) => {
       fetchProfileData();
     }
    else {
-    setLoading(false); // If no token, stop loading
+    setLoading(false); 
   }
   return () => {
     isMounted = false;
@@ -90,7 +90,7 @@ const ProfileScreen = ({ navigation }) => {
   }, [token]);
 
   if (loading) {
-    return <ActivityIndicator size="large" color="#0000ff" />; // Display loading indicator
+    return <ActivityIndicator size="large" color="#0000ff" />; 
   }
 
   if (error) {
@@ -140,7 +140,7 @@ const ProfileScreen = ({ navigation }) => {
     </View>
   );
 
-  // Static badge data
+ 
   const badgeData = [
     {
       id: '1',
@@ -184,7 +184,7 @@ const ProfileScreen = ({ navigation }) => {
         </View>
         <TouchableOpacity
           style={styles.editProfileButton}
-          onPress={() => navigation.navigate('EditProfile')} // Adjust this line as needed
+          onPress={() => navigation.navigate('EditProfile')}
         >
           <Text style={styles.editProfileButtonText}>Edit Profile</Text>
         </TouchableOpacity>
@@ -464,26 +464,26 @@ const styles = StyleSheet.create({
     preferencesTitle: {
       fontSize: 18,
       fontWeight: 'bold',
-      color: '#E91E63', // Myntra-themed pink
+      color: '#E91E63',
       marginVertical: 10,
     },
     preferencesContainer: {
       flexDirection: 'row',
-      flexWrap: 'wrap', // Allows wrapping of items to the next line
+      flexWrap: 'wrap',
       marginVertical: 10,
     },
     preference: {
-      backgroundColor: '#E0E0E0', // Grey background
-      borderRadius: 8, // Rounded corners
+      backgroundColor: '#E0E0E0',
+      borderRadius: 8,
       paddingHorizontal: 12,
       paddingVertical: 6,
       margin: 4,
-      borderColor: '#B0B0B0', // Slightly darker border for better visibility
+      borderColor: '#B0B0B0',
       borderWidth: 1,
     },
     preferenceText: {
       fontSize: 14,
-      color: '#333', // Dark text for better contrast
+      color: '#333', 
     },
     noPreferencesText: {
       fontSize: 14,
@@ -529,8 +529,8 @@ const styles = StyleSheet.create({
     },
     editProfileButton: {
       position: 'absolute',
-      bottom: -50, // Adjust as needed
-      right: 10, // Adjust as needed
+      bottom: -50, 
+      right: 10, 
       backgroundColor: '#E91E63',
       paddingVertical: 8,
       paddingHorizontal: 16,

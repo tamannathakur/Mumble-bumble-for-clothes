@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 70, // Adjusted to prevent overlap
+    marginBottom: 70, 
   },
   swipeIconHeart: {
     width: 100,

@@ -43,7 +43,7 @@ const CustomImage = ({ uri, style }) => {
 
 const styles = StyleSheet.create({
   placeholder: {
-    backgroundColor: '#e0e0e0', // Grey placeholder background
+    backgroundColor: '#e0e0e0',
   },
 });
 

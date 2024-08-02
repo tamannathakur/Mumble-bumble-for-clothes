@@ -46,7 +46,7 @@ const OutfitDetails = ({ route }) => {
     <View style={styles.container}>
       <FlatList
         data={items}
-        keyExtractor={(item) => item.itemId} // Use id as a unique key
+        keyExtractor={(item) => item.itemId}
         renderItem={renderItem}
         numColumns={2} 
       />

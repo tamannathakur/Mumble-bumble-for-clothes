@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Image } from 'react-native';
-import config from './src/config'; // Adjust the import path as necessary
+import config from './src/config';
 
 const RegisterScreen = ({ navigation }) => {
   const [name, setName] = useState('');
@@ -43,14 +43,14 @@ const RegisterScreen = ({ navigation }) => {
         placeholder="Name"
         value={name}
         onChangeText={setName}
-        placeholderTextColor="#aaa" // Set color for placeholder text
+        placeholderTextColor="#aaa" 
       />
       <TextInput
         style={styles.input}
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
-        placeholderTextColor="#aaa" // Set color for placeholder text
+        placeholderTextColor="#aaa" 
       />
       <TextInput
         style={styles.input}
@@ -58,7 +58,7 @@ const RegisterScreen = ({ navigation }) => {
         secureTextEntry
         value={password}
         onChangeText={setPassword}
-        placeholderTextColor="#aaa" // Set color for placeholder text
+        placeholderTextColor="#aaa" 
       />
       <TouchableOpacity style={styles.button} onPress={handleRegister}>
         <Text style={styles.buttonText}>Register</Text>
@@ -78,8 +78,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   logo: {
-    width: 150,  // Adjust the width as necessary
-    height: 50,  // Adjust the height as necessary
+    width: 150, 
+    height: 50, 
     resizeMode: 'contain',
     alignSelf: 'center',
     marginBottom: 40,

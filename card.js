@@ -20,7 +20,6 @@ class Card extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.image !== prevProps.image) {
-      // Perform any side effects here
     }
   }
 
