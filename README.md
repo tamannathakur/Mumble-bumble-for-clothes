@@ -3,7 +3,7 @@
 
 https://github.com/user-attachments/assets/6e5b86d1-20e2-434f-ab60-6c32cc34518f
 
-Mumble is a React Native application frontend that allows users to swipe through outfits, save favorites, and view detailed information about the items worn in each outfit. The app includes several features aimed at providing a seamless and engaging experience for fashion enthusiasts.
+Mumble is a React Native application that allows users to swipe through outfits, save favorites, and view detailed information about the items worn in each outfit. The app includes several features aimed at providing a seamless and engaging experience for fashion enthusiasts.
 
 ## Features:
 
